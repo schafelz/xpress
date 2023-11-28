@@ -7,8 +7,9 @@ const jwt = require('jsonwebtoken');
 const app = express();
 app.use(express.json());
 
-app.get('/', (req,res)=> {
-res.send("Hello, express")
+app.get('/',(req,res)=>{
+    //send a response back to the clients with a welcome msg
+    res.send('Welcome to our express App! - GET METHOD');
 });
 
 mongoose.connect('mongodb+srv://schaffy:Pumkin321@cluster0.fki5qgo.mongodb.net/',{
