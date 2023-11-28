@@ -7,6 +7,10 @@ const jwt = require('jsonwebtoken');
 const app = express();
 app.use(express.json());
 
+app.get('/', (req,res)=> {
+res.send("Hello, express")
+});
+
 mongoose.connect('mongodb+srv://schaffy:Admin321@cluster0.fki5qgo.mongodb.net',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
